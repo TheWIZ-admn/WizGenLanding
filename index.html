@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wizardly Genetics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preload" as="image" href="WizGenBackgroundImage.jpg">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Wizardly Genetics specializes in cannabis breeding, cloning, and tissue culture protocols.">
+  <meta name="keywords" content="cannabis cloning, tissue culture, Wizardly Genetics, hydroponics, SOPs">
+  <meta name="author" content="Lane">
+
+  <!-- Open Graph Preview -->
+  <meta property="og:title" content="Wizardly Genetics">
+  <meta property="og:description" content="Advanced cannabis cloning and tissue culture protocols.">
+  <meta property="og:image" content="wizardly-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://wizardlygenetics.com">
+  <meta property="og:type" content="website">
+
+  <style>
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeSuccess {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    #form-success {
+      animation: fadeSuccess 0.8s ease-out;
+    }
+
+    /* Logo sparkle animation */
+    @keyframes sparkleGlow {
+      0%, 100% { box-shadow: 0 0 20px #00ff00; }
+      50% { box-shadow: 0 0 30px #00ff99; }
+    }
+
+    /* QR pulse animation */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 10px #00ff00; }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px #00ff00; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e0ffe0;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('WizGenBackgroundImage.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.3) blur(2px);
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0;
+      color: #aaffaa;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 1.2em;
+      color: #cccccc;
+      margin-top: 0;
+    }
+
+    .logo {
+      max-width: 300px;
+      margin: 20px auto;
+      border-radius: 10px;
+      animation: sparkleGlow 3s infinite ease-in-out;
+    }
+
+    .links {
+      margin: 30px 0;
+    }
+
+    .links a {
+      display: block;
+      margin: 10px auto;
+      padding: 12px 20px;
+      width: 250px;
+      background-color: rgba(31, 31, 31, 0.8);
+      color: #aaffaa;
+      text-decoration: none;
+      border: 2px solid #00ff00;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #00ff00;
+      color: #0f0f0f;
+    }
+
+    .about, .contact {
+      max-width: 600px;
+      margin: 40px auto;
+      font-size: 1em;
+      color: #bbbbbb;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .contact img {
+      max-width: 200px;
+      margin: 20px auto;
+      border-radius: 10px;
+      animation: pulse 3s infinite ease-in-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #00ff00;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 500px;
+    }
+
+    form label {
+      color: #aaffaa;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      background-color: #111;
+      border: 2px solid #00ff88;
+      color: #aaffaa;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 6px;
+      transition: border-color 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #00ffaa;
+      outline: none;
+    }
+
+    form button {
+      background-color: #00ff88;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    form button:hover {
+      box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+      transform: scale(1.05);
+    }
+
+.sop-button {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 12px 20px;
+  background-color: rgba(31,31,31,0.8);
+  color: #aaffaa;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.sop-button:hover {
+  background-color: #00ff00;
+  color: #111;
+  box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+
+  <img src="WizGenLogo.jpg" alt="Wizardly Genetics Logo" class="logo">
+
+  <h1>Wizardly Genetics</h1>
+  <h2>🌿 Cultivating Magic Through Science</h2>
+
+  <div class="links">
+    <a href="https://www.facebook.com/profile.php?id=61559626127420" target="_blank">🔮 Facebook Page</a>
+    <a href="#" target="_blank">🛒 Online Store (Coming Soon!)</a>
+
+<main role="main">
+<section id="sopSection" style="padding:40px; background-color:#111; color:#fff; font-family:'Segoe UI', sans-serif;">
+  <h2 style="text-align:center; font-size:2em; margin-bottom:20px;">📘 Standard Operating Procedures</h2>
+
+  <!-- Cloning SOPs -->
+  <div style="margin-bottom:30px;">
+    <h3 style="color:#aaffaa;">🧪 Cloning SOPs</h3>
+    <a href="https://wizardlygenetics.github.io/docs/Wizardly_Genetics_Cloning_SOP.pdf" target="_blank" class="sop-button" aria-label="View Cloning SOP PDF">📄 View Cloning SOP (PDF)</a>
+  </div>
+
+  <!-- Growing SOPs -->
+  <div style="margin-bottom:30px;">
+    <h3 style="color:#ffdd55;">🌱 Growing SOPs</h3>
+    <a href="https://wizardlygenetics.github.io/docs/Wizardly_Genetics_Growing_SOP_1.pdf" target="_blank" class="sop-button" aria-label="View Nutrient Schedule SOP PDF">📄 View Nutrient Schedule SOP (PDF)</a>
+    <a href="https://wizardlygenetics.github.io/docs/Wizardly_Genetics_Lighting_SOP.pdf" target="_blank" class="sop-button" aria-label="View Lighting SOP PDF">📄 View Lighting SOP (PDF)</a>
+  </div>
+
+  <!-- Tissue Culture SOPs -->
+  <div style="margin-bottom:30px;">
+    <h3 style="color:#66ccff;">🧫 Tissue Culture SOPs</h3>
+    <a href="https://wizardlygenetics.github.io/docs/Wizardly_Genetics_TC_Initiation_SOP.pdf" target="_blank" class="sop-button" aria-label="View Initiation SOP PDF">📄 View Initiation SOP (PDF)</a>
+    <a href="https://wizardlygenetics.github.io/docs/Wizardly_Genetics_TC_MediaPrep_SOP.pdf" target="_blank" class="sop-button" aria-label="View Media Prep SOP PDF">📄 View Media Prep SOP (PDF)</a>
+  </div>
+</section>
+</main>
+  </div>
+
+  <div class="about">
+    <p>Wizardly Genetics is dedicated to pushing the boundaries of cannabis cultivation through innovative breeding techniques, scientific rigor, and a touch of magic. Whether you're a grower, breeder, or enthusiast, our mission is to empower your garden with legendary genetics.</p>
+  </div>
+
+  <div class="contact">
+    <h2>📧 Contact Us</h2>
+    <p>Email us at <a href="mailto:wizardlygenetics@gmail.com">wizardlygenetics@gmail.com</a></p>
+    <p>Or scan the QR code below to send us an email:</p>
+    <img src="WizQR2.png" alt="Email QR Code">
+    <h2>💬 Send Us a Message</h2>
+    <form action="https://formspree.io/f/xwkgnvql" method="POST">
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="form-success" style="display:none; color:#00ff88; font-weight:bold; margin-top:10px;">
+      ✅ Message sent! We'll be in touch soon.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 Wizardly Genetics. All rights reserved.
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    const successMsg = document.getElementById("form-success");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          successMsg.style.display = "block";
+          setTimeout(() => {
+            successMsg.style.display = "none";
+          }, 500);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
